@@ -1,14 +1,12 @@
 """
-El script pide un numero al usuario y genera la tabla de
-multiplicar de ese numero
+El programa recorre una lista de nombres y solo va a imprimir
+los nombres que no empiezan por A.
 """
 
-# Indico el nombre del script
-print("Tabla de multiplicar")
-# Pido al usuario que introduzca el numero
-numero = int(input("Introduzca un número entero: "))
+# Creo la lista con 9 nombres
+nombres = ["Carlos", "Alvaro", "Maria", "Eva", "Ramon", "Luisa"]
 
-for i in range(1, 11): # Con el bucle for recorro los numeros del 1 al 10.
-    resultado = numero * i # Guardo el resultado de la multiplicación en la variable resultado.
-    print(f"{numero} X {i} = {resultado}") # Muestro por pantalla el resultado.
-    i = i + 1 # Paso al siguiente número.
+for nombre in nombres: # Recorremos la lista con un bucle for
+    if nombre[0] == "A" or nombre[0] == "a": # Uso un condicional
+        continue                             # Uso continue para saltar los nombres que empiecen por A o por a
+    print(nombre)                            # Imprimo los nombres que no empiecen por A o por a.
